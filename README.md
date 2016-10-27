@@ -46,7 +46,7 @@ Runs all services under the user (not root)
 
 
 ####Other
-1. To disable: `launchctl load com.maximusmccann.rsnapshot.*.plist`
+1. To disable: `launchctl unload com.maximusmccann.rsnapshot.*.plist`
 
 
 ####Resources

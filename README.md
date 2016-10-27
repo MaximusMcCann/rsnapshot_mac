@@ -1,5 +1,13 @@
 ##Setup rsnapshot on your mac
 
+#####Why
+rsnapshot will take snapshots of any folders you specify.  The default config file uses these most recent intervals:
+
+- 48 hourly
+- 15 daily
+- 4 weekly 
+- 5 monthly
+
 ####Overview
 1. Install rsnapshot
 2. Setup rsnapshot

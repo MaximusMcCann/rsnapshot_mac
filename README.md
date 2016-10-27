@@ -26,7 +26,7 @@ Runs all services under the user (not root)
 		1. line 23: set backup location 
 			- `snapshot_root /Volumes/TimeMachine/backups # UPDATE ME` line
 		2. line 127: set the `<USER>` value
-		3. line 226: set what to backup starting 
+		3. line 226: set what to backup 
 			- `backup  /Users/<USER>/CODE/    localhost/ #UPDATE ME`
 3. test the config file with `rsnapshot configtest`
 4. fake snapshot with `rsnapshot -t hourly`

@@ -1,6 +1,5 @@
 ##Setup rsnapshot on your mac
 
-#####Why
 rsnapshot will take snapshots of any folders you specify.  The default config file uses these most recent intervals:
 
 - 48 hourly
@@ -8,7 +7,7 @@ rsnapshot will take snapshots of any folders you specify.  The default config fi
 - 4 weekly 
 - 5 monthly
 
-####Overview
+###Overview
 1. Install rsnapshot
 2. Setup rsnapshot
 3. Create background services
@@ -17,10 +16,10 @@ rsnapshot will take snapshots of any folders you specify.  The default config fi
 Runs all services under the user (not root)
 
 
-#####Install rsnapshot
+####Install rsnapshot
 1. `brew install rsnapshot`
 
-#####Setup rsnapshot
+####Setup rsnapshot
 1. `cp /usr/local/Cellar/rsnapshot/<VERSION>/etc/rsnapshot.conf.default /usr/local/Cellar/rsnapshot/<VERSION>/etc/rsnapshot.conf`
 2. Edit the `rsnapshot.conf` file 
 	1. Simple setup: copy the sample file
@@ -33,20 +32,20 @@ Runs all services under the user (not root)
 4. fake snapshot with `rsnapshot -t hourly`
 5. run your first snapshot with `rsnapshot hourly` and make sure no errors arise
 
-#####Create background services
+####Create background services
 1. copy `com.maximusmccann.rsnapshot.hourly.plist` to `/Library/LaunchAgents/`
 1. copy `com.maximusmccann.rsnapshot.daily.plist` to `/Library/LaunchAgents/`
 1. copy `com.maximusmccann.rsnapshot.weekly.plist` to `/Library/LaunchAgents/`
 1. copy `com.maximusmccann.rsnapshot.monthly.plist` to `/Library/LaunchAgents/`
 
-#####Run background services
+####Run background services
 1. run `launchctl load com.maximusmccann.rsnapshot.hourly.plist`
 2. run `launchctl load com.maximusmccann.rsnapshot.daily.plist`
 3. run `launchctl load com.maximusmccann.rsnapshot.weekly.plist`
 4. run `launchctl load com.maximusmccann.rsnapshot.monthly.plist`
 
 
-#####Other
+####Other
 1. To disable: `launchctl load com.maximusmccann.rsnapshot.*.plist`
 
 

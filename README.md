@@ -15,6 +15,8 @@ rsnapshot will take snapshots of any folders you specify.  The default config fi
 
 Runs all services under the user (not root)
 
+####Suggestion
+- Create a backup partition using `Disk Utility`
 
 ####Install rsnapshot
 1. `brew install rsnapshot`
